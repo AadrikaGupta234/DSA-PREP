@@ -36,15 +36,35 @@ Linear Search checks each element of an array one by one until the target elemen
 
 ---
 
-## 📌 What is Binary Search?
+## 📌 2. Binary Search
+🔹 Description
 
-Binary Search is a **divide and conquer algorithm** used to find an element in a sorted array.
+Binary Search is an efficient searching technique that works on sorted arrays by repeatedly dividing the search space into half until the target element is found or the range becomes empty.
 
-Instead of checking each element one by one, it reduces the search space by half in each step.
+###🔹 Characteristics
+Works only on sorted arrays
+Much faster than linear search for large datasets
+Uses the divide and conquer approach
 
+###🔹 Time Complexity
+Best Case: O(1)
+Worst Case: O(log n)
+
+###🔹 Space Complexity
+O(1)
+
+###🔹 Algorithm
+Set low = 0 and high = n - 1
+Find mid = (low + high) / 2
+Compare middle element with the key
+If match found → return index
+If key is smaller → search in left half (high = mid - 1)
+If key is larger → search in right half (low = mid + 1)
+Repeat until low <= high
+If not found → return -1
 ---
 
-## ⚙️ How It Works
+### ⚙️ How It Works
 
 1. Start with two pointers: `low` and `high`
 2. Find the middle element: `mid = (low + high) / 2`
@@ -56,7 +76,7 @@ Instead of checking each element one by one, it reduces the search space by half
 
 ---
 
-## 📈 Time & Space Complexity
+### 📈 Time & Space Complexity
 
 - **Best Case:** O(1)
 - **Worst Case:** O(log n)
